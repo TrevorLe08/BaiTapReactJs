@@ -5,6 +5,7 @@
 
 let a = 10
 let arr = [3, 4, 5, 6, 7, 8]
+
 // BT1
 let f1 = num => { // check prime
     if (num < 2) return false
