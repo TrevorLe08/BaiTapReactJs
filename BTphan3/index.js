@@ -43,8 +43,8 @@ console.log("---4. Sử dụng map, tính tổng tiền hàng sẽ có nếu bá
 // BT4
 let f4 = (array) => {
     let sum = 0
-    let newArr = array.map(x => x.price*x.quantity)
-    newArr.map(x => sum += x)
+    array.map(x => sum += x.price*x.quantity)
+
     console.log("Giá tiền khi bán hết sản phẩm",sum);
 }
 f4(arrProduct)
@@ -52,7 +52,7 @@ console.log("---5. Sử dụng reduce, tính tổng tiền hàng sẽ có nếu 
 
 // BT5
 let f5 = (array) => {
-    let sum = array.map(x => x.price*x.quantity).reduce((acc,value) => acc + value, 0)
+    let sum = array.reduce((s,x) => s+x.price*x.quantity,0)
     console.log("Giá tiền khi bán hết sản phẩm",sum);
 }
 f5(arrProduct)
